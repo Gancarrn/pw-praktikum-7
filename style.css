@@ -1,0 +1,24 @@
+.heading {
+  font-size: 50px;
+  text-align: center;
+}
+
+.fontSize1 {
+  font-size: 30px;
+}
+
+.fontSize2 {
+  font-size: 25px;
+}
+
+body {
+  padding: 25px;
+  background-color: white;
+  color: rgb(34, 32, 32);
+  font-size: 25px;
+}
+
+.darkMode {
+  background-color: rgb(34, 32, 32);
+  color: rgb(255, 255, 255);
+}

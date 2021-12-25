@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Pratikum 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light" style="background-color: #b9b9b9;">
+        <div class="heading">Pratikum 7</div>
+    </nav>
+    <br><br><br><br>
+
+    <select id="provinsi" class="fontSize1" onchange="myFunction()">
+        <option value="belum diisi">Provinsi</option>
+        <option value="Jawa Barat">Jawa Barat</option>
+        <option value="Jawa Tengah">Jawa Tengah</option>
+        <option value="Jawa Timur">Jawa Timur</option>
+        <option value="Kalimantan Timur">Kalimantan Timur</option>
+    </select>
+
+    <select id="kota" class="fontSize1">
+        <option value="belum diisi">Kota</option>
+        <option id="kota1" value=""></option>
+        <option id="kota2" value=""></option>
+        <option id="kota3" value=""></option>
+        <option id="kota4" value=""></option>
+        <option id="kota5" value=""></option>
+    </select>
+    
+    <h1 id="output"></h1>
+
+    <button onclick="outputFunction()">Submit</button>
+    <br><br><button id="dark" onclick="darkMode()">Dark Mode</button>
+
+    <script>
+        var prov = "belum diisi";
+        var kota;
+        var darkValue = 0;
+
+        function myFunction(){
+            prov = document.getElementById("provinsi").value;
+
+            if (prov === "Jawa Barat"){
+                document.getElementById("kota1").value = "Bogor";
+                document.getElementById("kota1").innerHTML = "Bogor";
+                document.getElementById("kota2").value = "Bandung";
+                document.getElementById("kota2").innerHTML = "Bandung";
+                document.getElementById("kota3").value = "Sukabumi";
+                document.getElementById("kota3").innerHTML = "Sukabumi";
+                document.getElementById("kota4").value = "Cianjur";
+                document.getElementById("kota4").innerHTML = "Cianjur";
+                document.getElementById("kota5").value = "Garut";
+                document.getElementById("kota5").innerHTML = "Garut";
+            }
+
+            else if (prov === "Jawa Tengah"){
+                document.getElementById("kota1").value = "Banjarnegara";
+                document.getElementById("kota1").innerHTML = "Banjarnegara";
+                document.getElementById("kota2").value = "Purwokerto";
+                document.getElementById("kota2").innerHTML = "Purwokerto";
+                document.getElementById("kota3").value = "Batang";
+                document.getElementById("kota3").innerHTML = "Batang";
+                document.getElementById("kota4").value = "Blora";
+                document.getElementById("kota4").innerHTML = "Blora";
+                document.getElementById("kota5").value = "Boyolali";
+                document.getElementById("kota5").innerHTML = "Boyolali";
+            }
+
+            else if (prov === "Jawa Timur"){
+                document.getElementById("kota1").value = "Banyuwangi";
+                document.getElementById("kota1").innerHTML = "Banyuwangi";
+                document.getElementById("kota2").value = "Bojonegoro";
+                document.getElementById("kota2").innerHTML = "Bojonegoro";
+                document.getElementById("kota3").value = "Jember";
+                document.getElementById("kota3").innerHTML = "Jember";
+                document.getElementById("kota4").value = "Jombang";
+                document.getElementById("kota4").innerHTML = "Jombang";
+                document.getElementById("kota5").value = "Magetan";
+                document.getElementById("kota5").innerHTML = "Magetan";
+            }
+
+            else if (prov === "Kalimantan Timur"){
+                document.getElementById("kota1").value = "Bontang";
+                document.getElementById("kota1").innerHTML = "Bontang";
+                document.getElementById("kota2").value = "Balikpapan";
+                document.getElementById("kota2").innerHTML = "Balikpapan";
+                document.getElementById("kota3").value = "Samarinda";
+                document.getElementById("kota3").innerHTML = "Samarinda";
+                document.getElementById("kota4").value = "Tenggarong";
+                document.getElementById("kota4").innerHTML = "Tenggarong";
+                document.getElementById("kota5").value = "Sangatta";
+                document.getElementById("kota5").innerHTML = "Sangatta";
+            }
+        }
+
+        function outputFunction(){
+            kota = document.getElementById("kota").value;
+            document.getElementById("output").innerHTML = "Provinsi :" + prov + "<br>Kota :" + kota;
+        }
+
+        function darkMode(){
+            var element = document.body;
+            element.classList.toggle("darkMode");
+            if (darkValue == 0){
+                document.getElementById("dark").innerHTML = "white mode";
+                darkValue = darkValue + 1;
+            }
+
+            else if (darkValue == 1){
+                document.getElementById("dark").innerHTML = "dark mode";
+                darkValue = darkValue - 1;
+            }
+            
+        }
+
+        
+    </script>
+    
+</body>
+</html>
